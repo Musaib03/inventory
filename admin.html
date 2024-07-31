@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-storage.js"></script>
+	
+	<script src="js/common.js">
+	// firebase.initializeApp(firebaseConfig);
+	// firebase.analytics();
+	</script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
+    <!-- Admin Dashboard -->
+    <div>
+        <h2>Admin Dashboard</h2>
+        <form id="add-product-form">
+            <input type="text" id="product-name" placeholder="Product Name" required>
+            <input type="text" id="product-description" placeholder="Description" required>
+            <input type="text" id="product-category" placeholder="Category" required>
+            <input type="number" id="product-quantity" placeholder="Quantity" required>
+            <input type="file" id="product-image" accept="image/*" required>
+            <button type="submit">Add Product</button>
+        </form>
+        <div id="product-list"></div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
